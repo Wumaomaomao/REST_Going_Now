@@ -39,13 +39,6 @@ paths = [
 
 port = sys.argv[1]
 path = sys.argv[2]
-# name = sys.argv[2]
-# k = 0
-# for i in range(len(services)):
-#     if name == services[i]:
-#         k = i
-#
-# path = paths[k]
 
 print("Generating report")
 
@@ -68,11 +61,10 @@ for subdir in subdirs:
 
 jacoco_command2 = jacoco_command2 + ' --csv '
 
-jacoco_command1 = 'java -jar org.jacoco.cli-0.8.7-nodeps.jar report '
+jacoco_command1 = 'java -jar ~/REST_Go/org.jacoco.cli-0.8.7-nodeps.jar report '
 
 files = [f for f in os.listdir(curdir)]
 files.sort()
-
 
 count = 0
 errors = []
@@ -129,7 +121,7 @@ c_method = [0, 0, 0, 0, 0, 0]
 error = 0
 unique_err = 0
 crucial = 0
-mypath = os.path.join(curdir, "result")
+mypath = os.path.join(curdir, "")
 if os.path.isdir(mypath):
     onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
     for dir_file in onlyfiles:
@@ -279,7 +271,7 @@ result_path = "report_result"
 
 subprocess.run("mkdir -p " + result_path, shell=True)
 subprocess.call('mv res.csv ' + result_path, shell=True)
-# subprocess.call('mv *.csv ' + result_path, shell=True)
+subprocess.call('mv *.csv ' + result_path, shell=True)
 subprocess.call('mv error.json ' + result_path, shell=True)
 subprocess.call('mv time.json ' + result_path, shell=True)
 subprocess.call('mv jacoco*.exec ' + result_path, shell=True)

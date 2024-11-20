@@ -1,5 +1,5 @@
 NO_INTERVAL=6
-TIME_INTERVAL=10
+TIME_INTERVAL=5
 OUTPUT_DIR=${2:-.}  # Use the second command line argument as the output directory, default to current directory
 
 # Create the output directory if it doesn't exist

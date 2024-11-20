@@ -1,0 +1,43 @@
+main_driver_500: 10
+Total Buckets: 10
+-------------
+main_driver_500 - Bug was reproduced - main_driver_500_1.txt
+Hash: main_driver_500_a9a66dae59fc428c76ed587832e0902a8d5778af
+GET /products/fuzzstring/features HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:50100\r\n\r\n
+--------------------------------------------------------------------------------
+main_driver_500 - Bug was reproduced - main_driver_500_2.txt
+Hash: main_driver_500_e3620b2452a0c2e1988bf138616a5aa27732b157
+GET /products/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:50100\r\n\r\n
+--------------------------------------------------------------------------------
+main_driver_500 - Bug was reproduced - main_driver_500_3.txt
+Hash: main_driver_500_607e38776179d65da8e9817df201a774e5d1622e
+DELETE /products/fuzzstring/configurations/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:50100\r\n\r\n
+--------------------------------------------------------------------------------
+main_driver_500 - Bug was reproduced - main_driver_500_4.txt
+Hash: main_driver_500_0f441afe04f54b2c16b8baafe40582dd3be0cbd3
+DELETE /products/fuzzstring/configurations/fuzzstring/features/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:50100\r\n\r\n
+--------------------------------------------------------------------------------
+main_driver_500 - Bug was reproduced - main_driver_500_5.txt
+Hash: main_driver_500_62628578e5c55aecc7ea7cd9d7b0a7ee2b508345
+POST /products/fuzzstring/configurations/fuzzstring/features/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:50100\r\n\r\n
+--------------------------------------------------------------------------------
+main_driver_500 - Bug was reproduced - main_driver_500_6.txt
+Hash: main_driver_500_e5b2dba1c77fe2ac15a8a101b7e6060a32add6eb
+POST /products/fuzzstring/constraints/excludes HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:50100\r\nContent-Type: application/json\r\n\r\n{\n    "sourceFeature":fuzzstring,\n    "excludedFeature":fuzzstring}\r\n
+--------------------------------------------------------------------------------
+main_driver_500 - Bug was reproduced - main_driver_500_7.txt
+Hash: main_driver_500_98ed9eecd22f14f4a4c73533dea54d06c43a4581
+PUT /products/fuzzstring/features/featureName HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:50100\r\nContent-Type: application/json\r\n\r\n{\n    "description":fuzzstring}\r\n
+--------------------------------------------------------------------------------
+main_driver_500 - Bug was reproduced - main_driver_500_8.txt
+Hash: main_driver_500_fa85c7156fa2143b95907840957959b2ed27d162
+GET /products/fuzzstring/configurations/fuzzstring/features HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:50100\r\n\r\n
+--------------------------------------------------------------------------------
+main_driver_500 - Bug was reproduced - main_driver_500_9.txt
+Hash: main_driver_500_7684691d79324fea8c8be3ed49db02109dafec95
+POST /products/fuzzstring/constraints/requires HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:50100\r\nContent-Type: application/json\r\n\r\n{\n    "sourceFeature":fuzzstring,\n    "requiredFeature":fuzzstring}\r\n
+--------------------------------------------------------------------------------
+main_driver_500 - Bug was reproduced - main_driver_500_10.txt
+Hash: main_driver_500_f37beded064b8d19a0b70b2783455ba6486b6e1f
+POST /products/fuzzstring/configurations/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:50100\r\n\r\n
+--------------------------------------------------------------------------------

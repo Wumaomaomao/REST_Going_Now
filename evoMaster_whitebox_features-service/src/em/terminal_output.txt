@@ -1,0 +1,10 @@
+* Evaluated tests: 6407
+* Evaluated actions: 34982
+* Needed budget: 78%
+* Passed time (seconds): 1801
+* Execution time per test (ms): Avg=274.27 , min=10.00 , max=4459.00
+* Computation overhead between tests (ms): Avg=6.67 , min=0.00 , max=330.00
+* Covered targets (lines, branches, faults, etc.): 728
+* Potential faults: 29
+* Bytecode line coverage: 65% (275 out of 426 in 33 units/classes)
+* EvoMaster process has completed successfully

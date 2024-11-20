@@ -11,6 +11,7 @@ def run_service(service_path, class_name):
     if name == "cwa-verification" or name == "market" or name == "project-tracking-system":
         subprocess.run(". ./java11.env && cd " + service_path + " && tmux new-session -d -s " + name + " 'sudo sh run.sh'", shell=True)
     else:
+        print("subprocess run: . ./java8.env && cd " + service_path + " && tmux new-session -d -s " + name + " 'sudo sh run.sh'")
         subprocess.run(". ./java8.env && cd " + service_path + " && tmux new-session -d -s " + name + " 'sudo sh run.sh'", shell=True)
 
 
@@ -75,6 +76,7 @@ if __name__ == "__main__":
             run_service("./services/jdk11/project-tracking-system", "org.evo.EMDriver")
     else:
         if name == "features-service":
+            # print("run features-service with blackbox mode")
             run_service("./services/evo_jdk8/em/embedded/rest/features-service", "em.embedded.org.javiermf.features.RunServer")
         elif name == "languagetool":
             run_service("./services/evo_jdk8/em/embedded/rest/languagetool", "em.embedded.org.languagetool.RunServer")
